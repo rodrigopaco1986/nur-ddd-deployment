@@ -26,11 +26,9 @@ class PushEvent extends ProcessWebhookJob
             default => null,
         };
 
-        if ($response) {
-            $this->webhookCall->markAsProcessed();
-        } else {
-            $this->webhookCall->markAsFailed();
-        }
+        echo '<pre>';
+        print_r($response);
+        echo '</pre>';
     }
 
     private function handleDevelopBranch(): string
